@@ -33,7 +33,6 @@ function App() {
         ) : !contactSelected && !aboutSelected ? (
         <>
             <Gallery currentCategory={currentCategory}></Gallery>
-            <About></About>
         </>
         ): (
            <ContactForm></ContactForm>
