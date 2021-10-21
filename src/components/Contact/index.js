@@ -31,7 +31,7 @@ const ContactForm = () => {
     const {name, email, message } = formState;
     return (
         <section>
-            <h1>Contact me</h1>
+            <h1 data-testid='link'>Contact me</h1>
             <form id="contact-form" onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="name">Name:</label>
@@ -50,7 +50,7 @@ const ContactForm = () => {
                                 <p className="error-text">{errorMessage}</p>
                             </div>
                     )}
-                    <button type="submit">Submit</button>
+                    <button data-testid='button' type="submit">Submit</button>
             </form>
         </section>
     )
