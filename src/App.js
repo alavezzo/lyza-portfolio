@@ -9,7 +9,8 @@ import ContactForm from './components/Contact';
 function App() {
   
   const [contactSelected, setContactSelected] = useState(false);
-  
+  const [aboutSelected, setAboutSelected ] = useState(true);
+
   const [categories] = useState([
       {
           name: "commercial",
@@ -21,15 +22,17 @@ function App() {
       { name: "landscape", description: "Fields, farmhouses, waterfalls,and the beauty of nature", },
   ]);
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
+  
+  console.log(aboutSelected);
   return (
     <div>
-      <Nav categories = {categories} setCurrentCategory = {setCurrentCategory} currentCategory = {currentCategory} contactSelected={contactSelected} setContactSelected={setContactSelected}></Nav>
+      <Nav categories = {categories} setCurrentCategory = {setCurrentCategory} currentCategory = {currentCategory} contactSelected={contactSelected} setContactSelected={setContactSelected} aboutSelected={aboutSelected} setAboutSelected={setAboutSelected}></Nav>
       <main>
-        {!contactSelected ? (
+        { aboutSelected ? (
+          <About></About>
+        ) : !contactSelected && !aboutSelected ? (
         <>
             <Gallery currentCategory={currentCategory}></Gallery>
-            <About></About>
         </>
         ): (
            <ContactForm></ContactForm>

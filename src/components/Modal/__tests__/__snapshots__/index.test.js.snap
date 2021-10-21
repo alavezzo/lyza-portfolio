@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Tests Matches Snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="modalBackdrop"
+  >
+    <div
+      class="modalContainer"
+    >
+      <h3
+        class="modalTitle"
+      />
+      <img
+        alt="portraits"
+      />
+      <p>
+        loremispum
+      </p>
+      <button
+        type="button"
+      >
+        Close this modal
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
